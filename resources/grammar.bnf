@@ -1,0 +1,7 @@
+query = <'{'> token params? fields <'}'>
+params = <'('> param (<','> param)* <')'>
+<param> = token <':'> token
+fields = <'{'> field (<','> field)* <'}'>
+field = token params? alias? fields?
+alias = <'as'> token
+<token> = #"\w+"

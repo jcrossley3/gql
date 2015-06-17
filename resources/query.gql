@@ -1,0 +1,19 @@
+{
+  user(id: 42) {
+    id,
+    nickname,
+    avatar(width: 50, height: 50) {
+      url(protocol: https)
+    },
+    posts(first: 10) {
+      count,
+      edges {
+        node as post {
+          id,
+          title,
+          published_at
+        }
+      }
+    }
+  }
+}
